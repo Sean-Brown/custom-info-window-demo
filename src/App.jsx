@@ -55,14 +55,10 @@ function App() {
     };
   }, []);
 
-  const HiddenItemList = useMemo(() => {
-    return portals.map(p => p)
-  }, [portals]);
-
   return (
     <>
       <MapDiv id='app-map' />
-      <HiddenItems>{HiddenItemList}</HiddenItems>
+      <HiddenItems>{portals}</HiddenItems>
     </>
   )
 }
